@@ -1,4 +1,10 @@
 {
+    "contributors": [
+        "TheSpeedX",
+        "Avinash",
+        "Reiltar"
+    ],
+    "version": "2.3",
     "sms": {
         "91": [
             {
@@ -35,8 +41,8 @@
                 "url": "https://www.gapoon.com/userSignup",
                 "data": {
                     "mobile": "{target}",
-                    "email": "SpeedX@gmail.com",
-                    "name": "SpeedX"
+                    "email": "noreply@gmail.com",
+                    "name": "LexLuthor"
                 },
                 "identifier": "1"
             },
@@ -118,18 +124,6 @@
                     "phone_number": "{target}"
                 },
                 "identifier": "sent"
-            },
-            {
-                "name": "mobikwik",
-                "method": "POST",
-                "url": "https://webapi.mobikwik.com/p/account/otp/cell/v2",
-                "data": {
-                    "cell": "{target}"
-                },
-                "headers": {
-                    "X-MClient": "0"
-                },
-                "identifier": "true"
             },
             {
                 "name": "airtel",
@@ -396,6 +390,30 @@
                     "whatsAppOpted": false
                 },
                 "identifier": "200"
+            },
+            {
+                "name": "newtonschools",
+                "method": "POST",
+                "url": "https://my.newtonschool.co:443/api/v1/user/otp/",
+                "params": {
+                    "registration": true
+                },
+                "data": {
+                    "phone": "+{cc}{target}"
+                },
+                "identifier": "S003"
+            },
+            {
+                "name": "qiwi",
+                "method": "POST",
+                "url": "https://mobile-api.qiwi.com/oauth/authorize",
+                "data": {
+                    "response_type": "urn:qiwi:oauth:response-type:confirmation-id",
+                    "username": "{cc}{target}",
+                    "client_id": "android-qw",
+                    "client_secret": "zAm4FKq9UnSe7id"
+                },
+                "identifier": "confirmation_id"
             }
         ]
     },
@@ -482,6 +500,41 @@
         "multi": []
     },
     "mail": {
-        "multi": []
+        "multi": [
+            {
+                "name": "themezee",
+                "method": "POST",
+                "url": "https://themezee.com/wp-admin/admin-ajax.php?action=mc4wp-form",
+                "data": {
+                    "EMAIL": "{target}",
+                    "AGREE": "1",
+                    "_mc4wp_honeypot": "",
+                    "_mc4wp_timestamp": "1614865641",
+                    "_mc4wp_form_id": "184963",
+                    "_mc4wp_form_element_id": "mc4wp-form-1"
+                },
+                "identifier": "mc4wp-success"
+            },
+            {
+                "name": "credible_init",
+                "method": "POST",
+                "url": "https://mycredible.info:443/mycredible/signup",
+                "data": {
+                    "email": "{target}",
+                    "first_name": "Lex",
+                    "last_name": "Luthor"
+                },
+                "identifier": "ccuid"
+            },
+            {
+                "name": "credible_mail",
+                "method": "GET",
+                "url": "https://mycredible.info:443/mycredible/signin/request_otp",
+                "params": {
+                    "email": "{target}"
+                },
+                "identifier": ""
+            }
+        ]
     }
 }

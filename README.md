@@ -2,21 +2,17 @@
   <br>
   <a href="https://github.com/TheSpeedX/TBomb"><img src="https://i.ibb.co/F4HBKqm/TBomb.png" alt="TBomb"></a>
   <br>
-  TBomb v2.0b
+  TBomb v2.1b
   <br>
 </h1>
 
 
-<p align="center">A free and open-source SMS/Call bombing application for GNU/Linux And Termux</p>
+<p align="center">A free and open-source SMS/Call bombing application</p>
 
-## Note:
+## NOTE:
 
 
-> ## Deprecation Warning:
-> **All TBomb versions below v2.0 will no longer work after 14-11-2020.**  
-**All TBomb users need to update to v2.0 ASAP**
-
-**Due to overuse of script, a bunch APIs have been taken offline. It is okay if you do not receive all the messages.**
+> **Due to the overuse of script, a bunch of APIs have been taken offline. It is okay if you do not receive all the messages.**
 
 
 - The application requires active internet connection to contact the APIs
@@ -38,6 +34,7 @@ Python 3.8.3
 or any version greater than or equal to 3.4, this script has been tested and confirmed to be supported. For obsolete versions of Python (eg 2.7), use discretion while executing the script as it has not been tested there.
 
 ## Features
+
 - Over 15 integrated messaging and calling APIs included with JSON
 - Unlimited (with abuse protection) and super-fast bombing with multithreading
 - Possibility of international API support (APIs are offline)
@@ -50,15 +47,35 @@ or any version greater than or equal to 3.4, this script has been tested and con
 
 ## Usage:
 
-### NOTE 
+### Install by PIP (Recommended)
+
+Before continuing make sure following requirements are satisfied:
+
+- Python version greater than or equal to 3.4 is installed
+- pip is installed for Python 3
+
+Install `tbomb` package by running:
+
+```shell script
+pip3 install tbomb
+```
+
+Run TBomb by just typing:
+```shell script
+tbomb
+```
+
+### Install from GIT
+
+#### NOTE 
 
 Git installation methods are not universal and are likely to differ between distributions so installing Git as per the given instructions below may not work. Please check out how to install Git for your Linux distribution [here](https://git-scm.com/). Commands below provide instructions for Debian-based systems.
 
->Ruuning `TBomb.sh` as sudo miscofigures files ownership. It is recommended not to run it as sudo
+>Running `TBomb.sh` as sudo miscofigures files ownership. It is recommended not to run it as sudo
 
 Run these commands to clone and run TBomb.
 
-### For Termux
+#### For Termux
 
 To use the bomber type the following commands in Termux:
 ```shell script
@@ -69,106 +86,142 @@ cd TBomb
 ./TBomb.sh
 ```
 
-### For iSH
+#### For iSH
 
 To use the application, type in the following commands in iSH.
 ```shell script
 apk add git
 apk add python3
 apk add py3-pip
-git clone https://github.com/TheSpeedX/TBomb.git
+apk add ruby
+gem install toilet
+git clone https://github.com/TheSpeedX/TBomb.git
 cd TBomb
 pip3 install -r requirements.txt
 chmod +x TBomb.sh
 ./TBomb.sh
 ```
 
-### For Debian-based GNU/Linux distributions
+#### For Debian-based GNU/Linux distributions
 
 To use the application, type in the following commands in GNU/Linux terminal.
 ```shell script
 sudo apt install git
-git clone https://github.com/TheSpeedX/TBomb.git
+git clone https://github.com/TheSpeedX/TBomb.git
 cd TBomb
 bash TBomb.sh
 ```
 
-### For MacOS
+#### For MacOS
 
 To use the application, type in the following commands in MacOS terminal:
 
-#### Install Brew
+##### Install Brew
 
 ```shell script
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ````
 
-#### Install dependencies:
+##### Install dependencies:
 
 ```shell script
 brew install git
 brew install python3
 sudo easy_install pip
 sudo pip install --upgrade pip
-git clone https://github.com/TheSpeedX/TBomb.git
+git clone https://github.com/TheSpeedX/TBomb.git
 cd TBomb
-```
-
-#### Run TBomb
-
-```shell script
 bash TBomb.sh
 ```
 
-#### Missing Tools on MacOS & iSH App
 
-The package `toilet` cannot be installed yet. But TBomb does still work.
+##### Missing Tools on MacOS
 
-## Demonstrative Video:
+The package `toilet` cannot be installed yet on macOS. But TBomb does still work.
+
+### Demonstrative Video:
 
 - Watch Indian Bombing Method [here](https://youtu.be/9KWkwsr_QGw)  
 - Watch International Bombing Method [here](https://youtu.be/JqsHkyIcnPM).  
 
 ## Contributors
 
-- **[SpeedX](https://github.com/TheSpeedX)**<br>
-[X] Mail at: ggspeedx29@gmail.com
-
-- **[t0xic0der](https://github.com/t0xic0der)**<br>
-[X] Catch at: https://atlasdoc.netlify.app
-
-- **[Avinash](https://github.com/AvinashReddy3108)**<br>
-[X] Check at: https://github.com/AvinashReddy3108
-
-- **[scpketer](https://github.com/scpketer)**<br>
-[X] Mail At: scpketer@protonmail.ch
-
-- **[Stefan](https://github.com/0n1cOn3)**<br>
-[X] Mail at: 0n1cOn3@gmx.ch
-
-- **Rieltar**<br>
-[X] Ping at: https://t.me/RieltarReborn
+- Catch **[t0xic0der](https://github.com/t0xic0der)** at https://atlasdoc.netlify.app
+- Check **[Avinash](https://github.com/AvinashReddy3108)** at https://github.com/AvinashReddy3108
+- Mail **[scpketer](https://github.com/scpketer)** at scpketer@protonmail.ch
+- Mail **[Stefan](https://github.com/0n1cOn3)** at 0n1cOn3@gmx.ch
+- Ping **Rieltar** at https://t.me/RieltarReborn
 
 
-## Donators:
+### Donators:
 
-* **[@] 34D30Y (34db0y@protonmail.com)**
-* **[@] SC AMAN**
+- **[34D30Y](34db0y@protonmail.com)**
+- **SC AMAN**
 
-## TODO:
+### TODO:
 
 - [x] Make Code More Readable and Extensible
-- [ ] Add Mail Spam Module
+- [x] Add Mail Spam Module
+- [x] Add Mail Spam APIs
 - [x] Add Update Feature using git
-- [ ] Add Update Feature without git (download tarball and extract)
-- [ ] Split code into multiple files (after Deprecation)
+- [x] Add Update Feature without git (download zip and extract)
+- [x] Split code into multiple files (after Deprecation)
 
 
-## Contact me
+### Contact US  
 
-Feel free to open an issue  
+For Queries: [Telegram Group](https://t.me/TBombChat)  
+[Check Out My YouTube Channel](https://www.youtube.com/c/SpeedXTech)
+
+## FAQ
+
+- Poor internet connection:
+
+```Check your internet connection and try pinging any remote address to confirm.```
+
+- Do you support "X" Country?
+
+```Most Countries are supported for SMS and only India for calls. The SMS delivery rate might be different for different countries.```
+
+- Can you add support for "X" Country?
+
+```We do what we can, but we cannot promise. Please stay tuned for future support. If you are ready to help then maybe we can do faster.```
+
+- Why is the limit so low?
+
+```Due the amount of requests, the APIs can die. To prevent a bigger outtake of TBomb, it has been limited.``` 
+
+- Help, i got the error that the requirements aren't installed, even when the installer has successfully reached the main menu
+
+The Easy Method:
+
+```pip3 install tbomb```
+
+Then execute by simply running
+
+```tbomb```
+
+The Git Method:  
+Clone the repo and Switch to the TBomb Directory and execute this command:  
+```pip3 install -r requirements.txt```
+
+- Help, i can't execute TBomb.sh!
+
+Run TBomb Directly with
+```python3 bomber.py```
+
+- VPN? Proxy's? 
+
+```No, TBomb can fail due the high response time or API restrictions.```
+
+- Protection ?
+
+```Use OTP Blockers and activate DND.```
+
+- Call Bombing does not work!
+
+``` It does only work for indian numbers. Other Country's are not supported yet.```
 
 
-Mail: [ggspeedx29@gmail.com](mailto:ggspeedx29@gmail.com)  
-[Check Out My YouTube Channel](https://www.youtube.com/c/GyanaTech)
+Last Update: 15.05.2021
 
